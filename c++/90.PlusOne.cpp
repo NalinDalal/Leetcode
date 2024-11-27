@@ -51,7 +51,7 @@ digit.
 #include <stack>
 #include <vector>
 
-using namespce std;
+using namespace std;
 
 class Solution {
 public:
