@@ -59,7 +59,7 @@ Apply to 2 previous value
 
 class Solution {
 public:
-  int evalRPN(vector<string> &tokens) {
+  int evalRPN(vector<string>& tokens) {
     std::stack<int> stack;
     for (int c = 0; c < tokens.size(); c++) {
       std::string token = tokens[c];

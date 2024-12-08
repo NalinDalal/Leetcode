@@ -126,7 +126,7 @@ v=events[i][2]`. let `time[2*i]={s, 0, v}; time[2*i+1]={e, 1, v}`
 class Solution {
 public:
   //    using info=tuple<int, bool, int>;
-  static int maxTwoEvents(vector<vector<int>> &events) {
+  static int maxTwoEvents(vector<vector<int>>& events) {
     const int n = events.size();
     vector<uint64_t> time(n * 2);
     for (int i = 0; i < n; i++) {

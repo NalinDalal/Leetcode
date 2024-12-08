@@ -63,7 +63,7 @@ using namespace std;
 
 class Solution {
 public:
-  int minLimit(vector<int> &nums, int maxoperations) {
+  int minLimit(vector<int>& nums, int maxoperations) {
     int n = nums.size();
     vector<int> dp(n + 1,
                    0); // dp is vector of size n+1 initialised with 0, dp[0]=0
@@ -119,7 +119,7 @@ right = max(nums): The largest number in the array.
 - Returns left, which is the smallest feasible value after the binary search. */
 class Solution1 {
 public:
-  int minimumSize(vector<int> &nums, int maxOperations) {
+  int minimumSize(vector<int>& nums, int maxOperations) {
     auto canDivide = [&](int maxBalls) { // O(n*log m)
       int ops = 0;
       for (int n : nums) {

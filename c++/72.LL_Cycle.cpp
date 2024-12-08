@@ -49,18 +49,18 @@ Follow up: Can you solve it using O(1) (i.e. constant) memory?*/
 // Definition for singly-linked list.
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode(int x) : val(x), next(nullptr) {}
 };
 
 class Solution {
 public:
-  bool hasCycle(ListNode *head) {
+  bool hasCycle(ListNode* head) {
     if (!head)
       return false;
 
-    ListNode *slow = head;
-    ListNode *fast = head;
+    ListNode* slow = head;
+    ListNode* fast = head;
     int step = 0; // For logging iterations
 
     while (fast != nullptr && fast->next != nullptr) {
@@ -86,7 +86,7 @@ public:
 };
 int main() {
   // Example of creating a linked list with a cycle
-  ListNode *head = new ListNode(1);
+  ListNode* head = new ListNode(1);
   head->next = new ListNode(2);
   head->next->next = new ListNode(3);
   head->next->next->next = new ListNode(4);

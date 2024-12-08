@@ -34,20 +34,20 @@ using namespace std;
 
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 class Solution {
 public:
-  ListNode *middleNode(ListNode *head) {
+  ListNode* middleNode(ListNode* head) {
     if (!head)
       return nullptr;
 
-    ListNode *slow = head;
-    ListNode *fast = head;
+    ListNode* slow = head;
+    ListNode* fast = head;
 
     while (fast && fast->next) {
       slow = slow->next;
@@ -60,11 +60,11 @@ public:
 
 // implementation->
 //  Helper functions to create and display a linked list
-ListNode *createList(const vector<int> &vals) {
+ListNode* createList(const vector<int>& vals) {
   if (vals.empty())
     return nullptr;
-  ListNode *head = new ListNode(vals[0]);
-  ListNode *current = head;
+  ListNode* head = new ListNode(vals[0]);
+  ListNode* current = head;
   for (size_t i = 1; i < vals.size(); ++i) {
     current->next = new ListNode(vals[i]);
     current = current->next;
@@ -72,7 +72,7 @@ ListNode *createList(const vector<int> &vals) {
   return head;
 }
 
-void printList(ListNode *head) {
+void printList(ListNode* head) {
   while (head) {
     cout << head->val;
     if (head->next)
@@ -88,15 +88,15 @@ int main() {
 
   // Test case 1
   vector<int> vals1 = {1, 2, 3, 4, 5, 6};
-  ListNode *head1 = createList(vals1);
-  ListNode *result1 = solution.middleNode(head1);
+  ListNode* head1 = createList(vals1);
+  ListNode* result1 = solution.middleNode(head1);
   cout << "Output for [1, 2, 3, 4, 5, 6]: ";
   printList(result1);
 
   // Test case 2
   vector<int> vals2 = {1, 2, 3, 4, 5};
-  ListNode *head2 = createList(vals2);
-  ListNode *result2 = solution.middleNode(head2);
+  ListNode* head2 = createList(vals2);
+  ListNode* result2 = solution.middleNode(head2);
   cout << "Output for [1, 2, 3, 4, 5]: ";
   printList(result2);
 

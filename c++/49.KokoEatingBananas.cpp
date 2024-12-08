@@ -75,7 +75,7 @@ public:
 #include <vector>
 class Solution {
 public:
-  int minEatingSpeed(vector<int> &piles, int h) {
+  int minEatingSpeed(vector<int>& piles, int h) {
     long long left = 1;
     long long right = 1000000000; // large number for upper bound
 
@@ -89,7 +89,7 @@ public:
     return left;
   }
 
-  bool canEatInTime(vector<int> &piles, long long k, int h) {
+  bool canEatInTime(vector<int>& piles, long long k, int h) {
     long long hours = 0;
     for (int pile : piles) {
       int div = pile / k;

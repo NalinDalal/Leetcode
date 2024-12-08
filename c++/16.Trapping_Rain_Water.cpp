@@ -28,7 +28,7 @@ using namespace std;
 
 class Solution {
 public:
-  int trap(vector<int> &height) {
+  int trap(vector<int>& height) {
     int i = 0, j = 0, ans = 0;
     while (i < height.size(); i++) {
       int lmax = 0, rmax = 0;

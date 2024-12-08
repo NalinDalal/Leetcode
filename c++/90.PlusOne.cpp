@@ -55,7 +55,7 @@ using namespace std;
 
 class Solution {
 public:
-  vector<int> plusOne(vector<int> &digits) {
+  vector<int> plusOne(vector<int>& digits) {
     stack<int> st;
 
     // Step 1: Push all digits into the stack

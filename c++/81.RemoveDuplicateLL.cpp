@@ -25,10 +25,10 @@ using namespace std;
 // Definition for singly-linked list.
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 /*
@@ -95,17 +95,17 @@ public:
 
 class Solution {
 public:
-  ListNode *deleteDuplicates(ListNode *head) {
+  ListNode* deleteDuplicates(ListNode* head) {
     // Create a dummy node to handle edge cases (e.g., duplicates at the head)
-    ListNode *dummy = new ListNode(0, head);
-    ListNode *prev = dummy; // Pointer to the last node known to be unique
+    ListNode* dummy = new ListNode(0, head);
+    ListNode* prev = dummy; // Pointer to the last node known to be unique
 
     while (head) {
       // Check if the current node is a duplicate
       if (head->next && head->val == head->next->val) {
         // Skip all nodes with the same value
         while (head->next && head->val == head->next->val) {
-          ListNode *temp = head;
+          ListNode* temp = head;
           head = head->next;
           delete temp; // Free memory for skipped nodes
         }
@@ -120,7 +120,7 @@ public:
       }
     }
 
-    ListNode *result = dummy->next;
+    ListNode* result = dummy->next;
     delete dummy; // Free the dummy node
     return result;
   }

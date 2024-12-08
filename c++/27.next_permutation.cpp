@@ -48,7 +48,7 @@ Output: [1,5,1]
 // Code->
 class Solution {
 public:
-  void nextPermutation(vector<int> &nums) {
+  void nextPermutation(vector<int>& nums) {
     int n = nums.size();
     int k = n - 2;
 

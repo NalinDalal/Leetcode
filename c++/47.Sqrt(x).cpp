@@ -103,7 +103,7 @@ public:
 
 // Solved: cast the multiplication result to a larger data type (like long long
 // int)
-//gptied only for this thing, for type casting
+// gptied only for this thing, for type casting
 class Solution {
 public:
   int mySqrt(int N) {

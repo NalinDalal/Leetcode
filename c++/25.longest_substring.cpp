@@ -72,7 +72,7 @@ public:
   int lengthOfLongestSubstring(string s) {
     // longest substring w/o repeating characters
     std::unordered_map<char, int> hash(256); // Initialize all values with -1
-    for (auto &entry : hash) {
+    for (auto& entry : hash) {
       entry.second = -1;
     }
 

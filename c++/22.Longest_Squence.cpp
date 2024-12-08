@@ -37,7 +37,7 @@ last me max(long,curr) ko log krana h
 
 class Solution {
 public:
-  int longestConsecutive(std::vector<int> &nums) {
+  int longestConsecutive(std::vector<int>& nums) {
     if (nums.empty()) {
       return 0;
     }

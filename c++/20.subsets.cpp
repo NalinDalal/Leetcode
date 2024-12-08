@@ -32,14 +32,14 @@ All the numbers of nums are unique.
 #include <vector>
 class Solution {
 public:
-  vector<vector<int>> subsets(vector<int> &nums) {
+  vector<vector<int>> subsets(vector<int>& nums) {
     vector<int> curSet;
     vector<vector<int>> subsets;
     helper(0, nums, curSet, subsets);
     return subsets;
   }
-  void helper(int i, vector<int> &nums, vector<int> &curSet,
-              vector<vector<int>> &subsets) {
+  void helper(int i, vector<int>& nums, vector<int>& curSet,
+              vector<vector<int>>& subsets) {
     if (i >= nums.size()) {
       subsets.push_back(vector<int>(curSet));
       return;
@@ -54,7 +54,7 @@ public:
     helper(i + 1, nums, curSet, subsets);
   }
 
-  vector<vector<int>> subsetWithDuplicates(vector<int> &nums) {
+  vector<vector<int>> subsetWithDuplicates(vector<int>& nums) {
     sort(nums.begin(), nums.end());
     vector<int> curSet;
     vector<vector<int>> subsets;
@@ -62,8 +62,8 @@ public:
     return subsets;
   }
 
-  void helper2(int i, vector<int> &nums, vector<int> &curSet,
-               vector<vector<int>> &subsets) {
+  void helper2(int i, vector<int>& nums, vector<int>& curSet,
+               vector<vector<int>>& subsets) {
     if (i >= nums.size()) {
       subsets.push_back(vector<int>(curSet));
       return;

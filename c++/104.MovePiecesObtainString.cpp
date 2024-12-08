@@ -169,7 +169,7 @@ validate the positions and movements of characters in both strings.
 */
 
 class Solution3 {
-  void skipSpaces(string &s, int &n, int &pos) {
+  void skipSpaces(string& s, int& n, int& pos) {
     while (pos < n and s[pos] == '_')
       pos++;
   }

@@ -84,14 +84,14 @@ public:
     }
 
     // Get the vector of (timestamp, value) pairs for the key
-    const auto &values = store[key];
+    const auto& values = store[key];
 
     // Binary search using upper_bound to find the position where timestamp <=
     // given timestamp We compare the first element of the pair (the timestamp)
     auto it = std::upper_bound(
         values.begin(), values.end(), std::make_pair(timestamp, std::string()),
-        [](const std::pair<int, std::string> &a,
-           const std::pair<int, std::string> &b) { return a.first < b.first; });
+        [](const std::pair<int, std::string>& a,
+           const std::pair<int, std::string>& b) { return a.first < b.first; });
 
     // If it == values.begin(), no timestamp is less than or equal to the given
     // timestamp

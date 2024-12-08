@@ -42,7 +42,7 @@ Output: [["a"]]
 
 class Solution {
 public:
-  vector<vector<string>> groupAnagrams(vector<string> &str) {
+  vector<vector<string>> groupAnagrams(vector<string>& str) {
     // 1. Store the values in the map..
     map<string, vector<string>> mp;
     for (int i = 0; i < str.size(); i++) {

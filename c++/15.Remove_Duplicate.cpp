@@ -49,7 +49,7 @@ beyond the returned k (hence they are underscores).
 
 class Solution {
 public:
-  int removeDuplicates(vector<int> &nums) {
+  int removeDuplicates(vector<int>& nums) {
     sort(nums.begin(), nums.end());
     for (int i = 0; i < nums.size(); i++) {
       // my approach - check if besiding num are equal, if then remove
@@ -75,7 +75,7 @@ public:
 
 class Solution {
 public:
-  int removeDuplicates(vector<int> &nums) {
+  int removeDuplicates(vector<int>& nums) {
     int j = 1;
     for (int i = 1; i < nums.size(); i++) {
       if (nums[i] != nums[i - 1]) {

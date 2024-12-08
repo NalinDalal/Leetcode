@@ -33,28 +33,28 @@ using namespace std;
 // Definition for singly-linked list.
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode(int x) : val(x), next(NULL) {}
 };
 
 class Solution {
 public:
-  void reorderList(ListNode *head) {
+  void reorderList(ListNode* head) {
     if (!head || !head->next)
       return;
 
     // Step 1: Find the middle of the linked list
-    ListNode *slow = head;
-    ListNode *fast = head;
+    ListNode* slow = head;
+    ListNode* fast = head;
     while (fast && fast->next) {
       slow = slow->next;
       fast = fast->next->next;
     }
 
     // Step 2: Reverse the second half of the list
-    ListNode *prev = NULL;
-    ListNode *curr = slow;
-    ListNode *next;
+    ListNode* prev = NULL;
+    ListNode* curr = slow;
+    ListNode* next;
     while (curr) {
       next = curr->next;
       curr->next = prev;
@@ -63,11 +63,11 @@ public:
     }
 
     // Step 3: Merge the two halves
-    ListNode *first = head;
-    ListNode *second = prev;
+    ListNode* first = head;
+    ListNode* second = prev;
     while (second->next) {
-      ListNode *temp1 = first->next;
-      ListNode *temp2 = second->next;
+      ListNode* temp1 = first->next;
+      ListNode* temp2 = second->next;
 
       first->next = second;
       second->next = temp1;
@@ -79,7 +79,7 @@ public:
 };
 
 // Helper function to print the list
-void printList(ListNode *head) {
+void printList(ListNode* head) {
   while (head) {
     cout << head->val << " ";
     head = head->next;
@@ -89,7 +89,7 @@ void printList(ListNode *head) {
 
 int main() {
   // Create example linked list: 1->2->3->4->5
-  ListNode *head = new ListNode(1);
+  ListNode* head = new ListNode(1);
   head->next = new ListNode(2);
   head->next->next = new ListNode(3);
   head->next->next->next = new ListNode(4);

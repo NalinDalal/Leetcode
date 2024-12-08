@@ -16,7 +16,7 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 
 class Solution {
 public:
-  int maxProduct(vector<int> &nums) {
+  int maxProduct(vector<int>& nums) {
     int n = nums.size();
     int max_prod = INT_MIN;
     for (int i = 0; i < n; i++) {

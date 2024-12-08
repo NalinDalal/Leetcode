@@ -41,7 +41,7 @@ using namespace std;
 
 class Solution {
 public:
-  vector<int> searchRange(vector<int> &nums, int target) {
+  vector<int> searchRange(vector<int>& nums, int target) {
     // Initialize variables to store the starting and ending indices
     int start = -1;
     int end = -1;

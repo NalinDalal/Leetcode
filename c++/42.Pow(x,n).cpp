@@ -1,6 +1,7 @@
 /*
 50. Pow(x, n)
-Implement pow(x, n), which calculates x raised to the power n (i.e., x^n) not xor operator. 
+Implement pow(x, n), which calculates x raised to the power n (i.e., x^n) not
+xor operator.
 
 Example 1:
 Input: x = 2.00000, n = 10
@@ -14,7 +15,7 @@ Example 3:
 Input: x = 2.00000, n = -2
 Output: 0.25000
 
-Explanation: 2-2 = 1/22 = 1/4 = 0.25 
+Explanation: 2-2 = 1/22 = 1/4 = 0.25
 
 Constraints:
 -100.0 < x < 100.0
@@ -37,11 +38,9 @@ Time complexity:O(1)
 Space complexity:O(1)
     */
 
-//Solution - use pow function
+// Solution - use pow function
 
 class Solution {
 public:
-    double myPow(double x, int n) {
-        return pow(x, n);
-    }
+  double myPow(double x, int n) { return pow(x, n); }
 };

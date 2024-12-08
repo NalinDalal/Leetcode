@@ -97,16 +97,16 @@ using namespace std;
 class Node {
 public:
   int val;
-  vector<Node *> neighbors;
+  vector<Node*> neighbors;
   Node() {
     val = 0;
-    neighbors = vector<Node *>();
+    neighbors = vector<Node*>();
   }
   Node(int _val) {
     val = _val;
-    neighbors = vector<Node *>();
+    neighbors = vector<Node*>();
   }
-  Node(int _val, vector<Node *> _neighbors) {
+  Node(int _val, vector<Node*> _neighbors) {
     val = _val;
     neighbors = _neighbors;
   }
@@ -115,10 +115,10 @@ public:
 class Solution {
 public:
   // Map to store visited nodes and their clones
-  unordered_map<Node *, Node *> visited;
+  unordered_map<Node*, Node*> visited;
 
   // DFS function to clone the graph
-  Node *cloneGraph(Node *node) {
+  Node* cloneGraph(Node* node) {
     if (node == nullptr) {
       return nullptr;
     }
@@ -129,13 +129,13 @@ public:
     }
 
     // Create a new node (clone) with the same value as the original node
-    Node *clone = new Node(node->val);
+    Node* clone = new Node(node->val);
 
     // Store this node in the visited map
     visited[node] = clone;
 
     // Iterate through the neighbors and clone them
-    for (Node *neighbor : node->neighbors) {
+    for (Node* neighbor : node->neighbors) {
       clone->neighbors.push_back(cloneGraph(neighbor));
     }
 
@@ -148,10 +148,10 @@ int main() {
   // 2nd node: 2 -> [1, 3]
   // 3rd node: 3 -> [2, 4]
   // 4th node: 4 -> [1, 3]
-  Node *node1 = new Node(1);
-  Node *node2 = new Node(2);
-  Node *node3 = new Node(3);
-  Node *node4 = new Node(4);
+  Node* node1 = new Node(1);
+  Node* node2 = new Node(2);
+  Node* node3 = new Node(3);
+  Node* node4 = new Node(4);
 
   node1->neighbors = {node2, node4};
   node2->neighbors = {node1, node3};

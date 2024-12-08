@@ -52,7 +52,7 @@ using namespace std;
 
 class Solution {
 public:
-  int findDuplicate(vector<int> &nums) {
+  int findDuplicate(vector<int>& nums) {
     std::sort(nums.begin(), nums.end());
     int prevValue = nums[0];
     for (int index = 1; index < nums.size(); ++index) {
@@ -98,7 +98,7 @@ duplicate number.*/
 
 class Solution2 {
 public:
-  int findDuplicate(vector<int> &nums) {
+  int findDuplicate(vector<int>& nums) {
     // Phase 1: Finding the intersection point
     int tortoise = nums[0];
     int hare = nums[0];

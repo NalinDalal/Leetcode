@@ -47,7 +47,7 @@ n == accounts[i].length
 
 class Solution {
 public:
-  int maximumWealth(vector<vector<int>> &accounts) {
+  int maximumWealth(vector<vector<int>>& accounts) {
     int maxWealthSoFar = 0;
     for (std::vector<int> customer : accounts) {
       int currentCustomerWealth = 0;

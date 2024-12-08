@@ -56,7 +56,7 @@ get arranged in ascending order, hence can return the element at 0th index
     */
 class Solution {
 public:
-  int findMin(std::vector<int> &nums) {
+  int findMin(std::vector<int>& nums) {
     if (nums.empty()) {
       std::cout << "The input vector is empty." << std::endl;
       return -1; // or throw an exception, depending on your requirements

@@ -96,7 +96,7 @@ target ki bakchodi bhul gya target pr jana h
 
     using namespace std;
 
-int carFleet(int target, vector<int> &position, vector<int> &speed) {
+int carFleet(int target, vector<int>& position, vector<int>& speed) {
   // Vector to store pairs of position and speed
   vector<pair<int, int>> cars;
 
@@ -107,7 +107,7 @@ int carFleet(int target, vector<int> &position, vector<int> &speed) {
 
   // Sort cars by their starting position in descending order
   sort(cars.begin(), cars.end(),
-       [](const pair<int, int> &a, const pair<int, int> &b) {
+       [](const pair<int, int>& a, const pair<int, int>& b) {
          return a.first > b.first;
        });
 

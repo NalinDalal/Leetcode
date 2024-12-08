@@ -18,7 +18,7 @@ using namespace std;
 
 class Solution {
 public:
-  bool containsDuplicate(vector<int> &nums) {
+  bool containsDuplicate(vector<int>& nums) {
     int n = sizeof(nums) / sizeof(nums[0]);
     sort(nums.begin(), nums.end());
     for (int i = 0; i < n - 1; i++) {

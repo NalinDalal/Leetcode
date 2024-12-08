@@ -73,7 +73,7 @@ using namespace std;
 
 class Solution {
 public:
-  long long combinationSum4(vector<int> &nums, int target) {
+  long long combinationSum4(vector<int>& nums, int target) {
     // Initialize the dp array with size (target + 1) and set dp[0] = 1.
     vector<long long> dp(target + 1, 0);
     dp[0] = 1;

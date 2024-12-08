@@ -121,7 +121,7 @@ return max_ rob
 */
 class Solution {
 public:
-  int rob(vector<int> &nums) {
+  int rob(vector<int>& nums) {
     int prev_rob = 0;
     int max_rob = 0;
 

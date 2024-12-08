@@ -104,7 +104,7 @@ preceding element matches zero times (dp[i][j-2]) or one or more times
 
 using namespace std;
 
-bool isMatch(const string &s, const string &p) {
+bool isMatch(const string& s, const string& p) {
   int m = s.length(), n = p.length();
 
   // dp[i][j] will be true if s[0:i] matches p[0:j]

@@ -52,7 +52,7 @@ space?*/
 
 using namespace std;
 
-void printVector(const std::vector<int> &vec) {
+void printVector(const std::vector<int>& vec) {
   for (int num : vec) {
     std::cout << num << " ";
   }
@@ -61,7 +61,7 @@ void printVector(const std::vector<int> &vec) {
 
 class Solution {
 public:
-  void rotate(std::vector<int> &nums, int k) {
+  void rotate(std::vector<int>& nums, int k) {
     int n = nums.size();
     k = k % n; // Handle cases where k >= n
 

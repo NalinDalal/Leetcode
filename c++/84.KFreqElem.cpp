@@ -40,7 +40,7 @@ using namespace std;
 
 class Solution {
 public:
-  vector<int> topKFrequent(vector<int> &nums, int k) {
+  vector<int> topKFrequent(vector<int>& nums, int k) {
     // Step 1: Count the frequencies of each element
     unordered_map<int, int> freq_map;
     for (int num : nums) {
@@ -54,7 +54,7 @@ public:
         min_heap;
 
     // Step 3: Push the elements into the heap
-    for (auto &entry : freq_map) {
+    for (auto& entry : freq_map) {
       min_heap.push({entry.second, entry.first});
       if (min_heap.size() > k) {
         min_heap.pop(); // Remove the element with the lowest frequency

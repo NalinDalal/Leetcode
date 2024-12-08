@@ -35,7 +35,7 @@ other character (More info).
 
 class Solution {
 public:
-  bool isAlienSorted(std::vector<std::string> &words, std::string order) {
+  bool isAlienSorted(std::vector<std::string>& words, std::string order) {
     // Create a mapping of characters to their positions in the alien alphabet
     std::unordered_map<char, int> alienOrder;
     for (int i = 0; i < order.size(); ++i) {
@@ -44,8 +44,8 @@ public:
 
     // Check if each adjacent pair of words is in sorted order
     for (int i = 1; i < words.size(); ++i) {
-      const std::string &prev = words[i - 1];
-      const std::string &current = words[i];
+      const std::string& prev = words[i - 1];
+      const std::string& current = words[i];
 
       // Compare each character of the two words
       int minLength = std::min(prev.size(), current.size());

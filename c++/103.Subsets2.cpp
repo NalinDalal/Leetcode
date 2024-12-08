@@ -48,7 +48,7 @@ current subset is added to the result.
 */
 class Solution {
 public:
-  vector<vector<int>> subsetsWithDup(vector<int> &nums) {
+  vector<vector<int>> subsetsWithDup(vector<int>& nums) {
     vector<vector<int>> powerSet;
     powerSet.push_back({}); // Insert the empty set
 
@@ -67,8 +67,8 @@ public:
     return powerSet;
   }
 
-  void backtrack(vector<int> &nums, int start, vector<int> &current,
-                 vector<vector<int>> &result) {
+  void backtrack(vector<int>& nums, int start, vector<int>& current,
+                 vector<vector<int>>& result) {
     result.push_back(current); // Add the current subset to the result
 
     // Iterate through the elements starting from 'start' index
@@ -85,7 +85,7 @@ public:
     }
   }
 
-  vector<vector<int>> generatePowerSet(vector<int> &nums) {
+  vector<vector<int>> generatePowerSet(vector<int>& nums) {
     vector<vector<int>> result;
     vector<int> current;
 
@@ -105,7 +105,7 @@ int main() {
   vector<vector<int>> result1 = s.generatePowerSet(nums1);
 
   // Print the power set
-  for (const auto &subset : result1) {
+  for (const auto& subset : result1) {
     cout << "[";
     for (int i = 0; i < subset.size(); ++i) {
       cout << subset[i] << (i == subset.size() - 1 ? "" : ", ");

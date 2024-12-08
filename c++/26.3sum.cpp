@@ -49,7 +49,7 @@ aur like ith element pr 2 sum laga do
 
 class Solution {
 public:
-  std::vector<std::vector<int>> threeSum(std::vector<int> &nums) {
+  std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
     std::vector<std::vector<int>> result;
     std::sort(nums.begin(), nums.end());
 

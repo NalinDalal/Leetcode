@@ -135,7 +135,7 @@ first row/column initialization. The result is the value stored in dp[m - 1][n -
 #include <vector>
 class Solution {
 public:
-  int uniquePathsWithObstacles(vector<vector<int>> &obstacleGrid) {
+  int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
     int m = obstacleGrid.size();
     int n = obstacleGrid[0].size();
 

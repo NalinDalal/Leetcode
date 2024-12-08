@@ -25,12 +25,12 @@ using namespace std;
 
 struct ListNode {
   int val;                              // node intialised
-  ListNode *next;                       // pointer initialised
+  ListNode* next;                       // pointer initialised
   ListNode() : val(0), next(nullptr) {} // empty node inialised
   ListNode(int x)
       : val(x), next(nullptr) {
   } // last node i.e. where ll ends(node with nullptr)
-  ListNode(int x, ListNode *next)
+  ListNode(int x, ListNode* next)
       : val(x), next(next) {} // normal node i.e. node in b/w(node with ptr)
 };
 
@@ -47,13 +47,13 @@ struct ListNode {
 
 class Solution {
 public:
-  ListNode *reverseList(ListNode *head) {
+  ListNode* reverseList(ListNode* head) {
 
-    ListNode *prev = NULL;
-    ListNode *curr = head;
+    ListNode* prev = NULL;
+    ListNode* curr = head;
 
     while (curr != NULL) {
-      ListNode *forward = curr->next;
+      ListNode* forward = curr->next;
       curr->next = prev;
       prev = curr;
       curr = forward;
@@ -64,13 +64,13 @@ public:
 
 int main() {
   // Constructing the linked list: 5 -> 3 -> 6 -> 4
-  ListNode *head = new ListNode(5);
+  ListNode* head = new ListNode(5);
   head->next = new ListNode(3);
   head->next->next = new ListNode(6);
   head->next->next->next = new ListNode(4);
 
   Solution sol;
-  ListNode *reversedList = sol.reverseList(head);
+  ListNode* reversedList = sol.reverseList(head);
 
   // Print the reversed linked list
   while (reversedList != nullptr) {

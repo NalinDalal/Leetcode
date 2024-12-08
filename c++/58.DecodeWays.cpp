@@ -143,7 +143,7 @@ class Solution2 {
 public:
   unordered_map<int, int> memo;
 
-  int dfs(const string &s, int i) {
+  int dfs(const string& s, int i) {
     if (memo.find(i) != memo.end())
       return memo[i];
     if (i == s.length())

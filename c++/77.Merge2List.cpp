@@ -35,17 +35,17 @@ using namespace std;
 // Definition for singly-linked list.
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 class Solution {
 public:
-  ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
-    ListNode *head = new ListNode(0);
-    ListNode *temp = head;
+  ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+    ListNode* head = new ListNode(0);
+    ListNode* temp = head;
     while (l1 != NULL && l2 != NULL) {
       if (l1->val < l2->val) {
         temp->next = l1;
@@ -66,15 +66,15 @@ public:
 };
 
 int main() {
-  ListNode *l1 = new ListNode(1);
+  ListNode* l1 = new ListNode(1);
   l1->next = new ListNode(2);
   l1->next->next = new ListNode(4);
-  ListNode *l2 = new ListNode(1);
+  ListNode* l2 = new ListNode(1);
   l2->next = new ListNode(3);
   l2->next->next = new ListNode(4);
 
   Solution s;
-  ListNode *head = s.mergeTwoLists(l1, l2);
+  ListNode* head = s.mergeTwoLists(l1, l2);
   while (head != NULL) {
     cout << head->val << " ";
     head = head->next;

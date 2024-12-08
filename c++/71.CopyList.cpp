@@ -71,8 +71,8 @@ looking up the corresponding copy in the map.*/
 class Node {
 public:
   int val;
-  Node *next;
-  Node *random;
+  Node* next;
+  Node* random;
 
   Node(int _val) {
     val = _val;
@@ -83,12 +83,12 @@ public:
 
 class Solution {
 public:
-  Node *copyRandomList(Node *head) {
+  Node* copyRandomList(Node* head) {
     if (!head) {
       return nullptr;
     }
     // std::unordered_map<std::string, int> oldToNew; // hashmap intialised
-    std::unordered_map<Node *, Node *> oldToNew;
+    std::unordered_map<Node*, Node*> oldToNew;
 
     /*# First pass: Create all the new nodes without random/next pointers
 current = head
@@ -96,7 +96,7 @@ while current:
     old_to_new[current] = Node(current.val)
     current = current.next
     */
-    Node *current = head;
+    Node* current = head;
     while (current != nullptr) {
       // old_to_new
       oldToNew[current] = new Node(current->val);
@@ -134,9 +134,9 @@ while current:
 };
 
 // Helper function to create a list from a vector of pairs
-Node *createList(const std::vector<std::pair<int, int>> &nodeData) {
-  std::vector<Node *> nodes;
-  for (const auto &data : nodeData) {
+Node* createList(const std::vector<std::pair<int, int>>& nodeData) {
+  std::vector<Node*> nodes;
+  for (const auto& data : nodeData) {
     nodes.push_back(new Node(data.first));
   }
   for (int i = 0; i < nodeData.size(); ++i) {
@@ -151,7 +151,7 @@ Node *createList(const std::vector<std::pair<int, int>> &nodeData) {
 }
 
 // Helper function to verify that the copied list matches the expected structure
-bool listsEqual(Node *original, Node *copy) {
+bool listsEqual(Node* original, Node* copy) {
   while (original && copy) {
     if (original->val != copy->val) {
       return false;
@@ -174,10 +174,10 @@ bool listsEqual(Node *original, Node *copy) {
 void test1() {
   std::vector<std::pair<int, int>> nodeData = {
       {7, -1}, {13, 0}, {11, 4}, {10, 2}, {1, 0}};
-  Node *head = createList(nodeData);
+  Node* head = createList(nodeData);
 
   Solution solution;
-  Node *copiedList = solution.copyRandomList(head);
+  Node* copiedList = solution.copyRandomList(head);
 
   assert(listsEqual(head, copiedList));
   std::cout << "Test case 1 passed!" << std::endl;
@@ -186,10 +186,10 @@ void test1() {
 // Test case 2: [[1,1],[2,1]]
 void test2() {
   std::vector<std::pair<int, int>> nodeData = {{1, 1}, {2, 1}};
-  Node *head = createList(nodeData);
+  Node* head = createList(nodeData);
 
   Solution solution;
-  Node *copiedList = solution.copyRandomList(head);
+  Node* copiedList = solution.copyRandomList(head);
 
   assert(listsEqual(head, copiedList));
   std::cout << "Test case 2 passed!" << std::endl;
@@ -198,10 +198,10 @@ void test2() {
 // Test case 3: [[3,null],[3,0],[3,null]]
 void test3() {
   std::vector<std::pair<int, int>> nodeData = {{3, -1}, {3, 0}, {3, -1}};
-  Node *head = createList(nodeData);
+  Node* head = createList(nodeData);
 
   Solution solution;
-  Node *copiedList = solution.copyRandomList(head);
+  Node* copiedList = solution.copyRandomList(head);
 
   assert(listsEqual(head, copiedList));
   std::cout << "Test case 3 passed!" << std::endl;

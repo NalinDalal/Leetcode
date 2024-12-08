@@ -28,11 +28,11 @@ using namespace std;
 // Definition for a binary tree node.
 struct TreeNode {
   int val;
-  TreeNode *left;
-  TreeNode *right;
+  TreeNode* left;
+  TreeNode* right;
   TreeNode() : val(0), left(nullptr), right(nullptr) {}
   TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  TreeNode(int x, TreeNode *left, TreeNode *right)
+  TreeNode(int x, TreeNode* left, TreeNode* right)
       : val(x), left(left), right(right) {}
 };
 
@@ -53,7 +53,7 @@ struct TreeNode {
 
 class Solution {
 public:
-  int diameterOfBinaryTree(TreeNode *root) {
+  int diameterOfBinaryTree(TreeNode* root) {
     if (root == NULL)
       return 0;
     if (root->left == NULL && root->right == NULL)
@@ -101,7 +101,7 @@ class Solution1 {
 public:
   int diameter = 0;
 
-  int height(TreeNode *root) {
+  int height(TreeNode* root) {
     if (root == NULL)
       return 0;
 
@@ -115,7 +115,7 @@ public:
     return 1 + max(left_height, right_height);
   }
 
-  int diameterOfBinaryTree(TreeNode *root) {
+  int diameterOfBinaryTree(TreeNode* root) {
     height(root); // This function updates the diameter
     return diameter;
   }
@@ -123,7 +123,7 @@ public:
 
 int main() {
   cout << "Test Case 1: " << endl;
-  TreeNode *root1 = new TreeNode(1);
+  TreeNode* root1 = new TreeNode(1);
   root1->left = new TreeNode(2);
   root1->right = new TreeNode(3);
   root1->left->left = new TreeNode(4);
@@ -133,7 +133,7 @@ int main() {
   cout << ans << endl;
 
   cout << "Test Case 2: " << endl;
-  TreeNode *root2 = new TreeNode(1);
+  TreeNode* root2 = new TreeNode(1);
   root2->left = new TreeNode(2);
   Solution1 obj1;
   int ans1 = obj1.diameterOfBinaryTree(TreeNode * root2);

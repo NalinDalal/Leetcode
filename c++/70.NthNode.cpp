@@ -100,14 +100,14 @@ using namespace std;
 // Definition for singly-linked list.
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int val) : val(val), next(nullptr) {}
-  ListNode(int val, ListNode *next) : val(val), next(next) {}
+  ListNode(int val, ListNode* next) : val(val), next(next) {}
 };
 
 // Function to print the linked list
-void printList(ListNode *head) {
+void printList(ListNode* head) {
   while (head) {
     cout << head->val;
     if (head->next)
@@ -118,11 +118,11 @@ void printList(ListNode *head) {
 }
 
 // Helper function to create a linked list from an array
-ListNode *createList(const vector<int> &vals) {
+ListNode* createList(const vector<int>& vals) {
   if (vals.empty())
     return nullptr;
-  ListNode *head = new ListNode(vals[0]);
-  ListNode *current = head;
+  ListNode* head = new ListNode(vals[0]);
+  ListNode* current = head;
   for (int i = 1; i < vals.size(); ++i) {
     current->next = new ListNode(vals[i]);
     current = current->next;
@@ -132,11 +132,11 @@ ListNode *createList(const vector<int> &vals) {
 
 class Solution {
 public:
-  ListNode *removeNthFromEnd(ListNode *head, int n) {
+  ListNode* removeNthFromEnd(ListNode* head, int n) {
     // Create a dummy node to simplify edge cases (like removing the first node)
-    ListNode *dummy = new ListNode(0, head);
-    ListNode *slow = dummy;
-    ListNode *fast = dummy;
+    ListNode* dummy = new ListNode(0, head);
+    ListNode* slow = dummy;
+    ListNode* fast = dummy;
 
     // Move the fast pointer `n + 1` steps ahead to create a gap of `n` between
     // fast and slow
@@ -151,13 +151,13 @@ public:
     }
 
     // Now, slow points to the node before the one we need to remove
-    ListNode *toDelete = slow->next;
+    ListNode* toDelete = slow->next;
     slow->next = slow->next->next;
     delete toDelete;
 
     // Return the new head (which might have changed if we deleted the first
     // node)
-    ListNode *newHead = dummy->next;
+    ListNode* newHead = dummy->next;
     delete dummy; // Clean up the dummy node
     return newHead;
   }
@@ -177,28 +177,28 @@ int main() {
   Solution solution;
 
   // Test case 1
-  ListNode *list1 = createList({1, 2, 3, 4, 5});
+  ListNode* list1 = createList({1, 2, 3, 4, 5});
   cout << "Original list: ";
   printList(list1);
-  ListNode *result1 = solution.removeNthFromEnd(list1, 2);
+  ListNode* result1 = solution.removeNthFromEnd(list1, 2);
   cout << "After removing 2nd from end: ";
   printList(result1);
   cout << endl;
 
   // Test case 2
-  ListNode *list2 = createList({1});
+  ListNode* list2 = createList({1});
   cout << "Original list: ";
   printList(list2);
-  ListNode *result2 = solution.removeNthFromEnd(list2, 1);
+  ListNode* result2 = solution.removeNthFromEnd(list2, 1);
   cout << "After removing 1st from end: ";
   printList(result2);
   cout << endl;
 
   // Test case 3
-  ListNode *list3 = createList({1, 2});
+  ListNode* list3 = createList({1, 2});
   cout << "Original list: ";
   printList(list3);
-  ListNode *result3 = solution.removeNthFromEnd(list3, 1);
+  ListNode* result3 = solution.removeNthFromEnd(list3, 1);
   cout << "After removing 1st from end: ";
   printList(result3);
   cout << endl;

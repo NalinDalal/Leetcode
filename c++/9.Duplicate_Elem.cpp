@@ -19,7 +19,7 @@ else {return false}
 
 class Solution {
 public:
-  bool containsDuplicate(vector<int> &nums) {
+  bool containsDuplicate(vector<int>& nums) {
     sort(nums.begin(), nums.end());
 
     bool flag = true;

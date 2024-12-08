@@ -32,7 +32,7 @@ Output: 1
 
 class Solution {
 public:
-  int maxArea(vector<int> &height) {
+  int maxArea(vector<int>& height) {
     int i = 0, j = height.size() - 1;
     int ans = 0, res = 0;
     while (i < j) {

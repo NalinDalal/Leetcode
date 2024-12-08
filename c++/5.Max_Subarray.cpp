@@ -29,7 +29,7 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 * */
 class Solution {
 public:
-  int maxSubArray(vector<int> &nums) {
+  int maxSubArray(vector<int>& nums) {
     int maxSum = nums[0];
     int curSum = 0;
 

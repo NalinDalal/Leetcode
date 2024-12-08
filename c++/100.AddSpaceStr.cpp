@@ -52,7 +52,7 @@ using namespace std;
 
 class Solution {
 public:
-  string addSpaces(string s, vector<int> &spaces) {
+  string addSpaces(string s, vector<int>& spaces) {
     string result;
     int spaceIndex = 0; // Pointer to track positions in the spaces vector
     int n = spaces.size();
@@ -71,7 +71,7 @@ public:
 };
 
 // Helper function to print a vector
-string printVector(const vector<int> &vec) {
+string printVector(const vector<int>& vec) {
   string result = "{";
   for (int i = 0; i < vec.size(); i++) {
     result += to_string(vec[i]);

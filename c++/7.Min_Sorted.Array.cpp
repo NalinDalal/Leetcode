@@ -35,7 +35,7 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 // sort the array then just log the first element
 class Solution {
 public:
-  int findMin(std::vector<int> &nums) {
+  int findMin(std::vector<int>& nums) {
     if (nums.empty()) {
       std::cout << "The input vector is empty." << std::endl;
       return -1; // or throw an exception, depending on your requirements

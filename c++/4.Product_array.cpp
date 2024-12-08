@@ -34,7 +34,7 @@ integer.
 */
 class Solution {
 public:
-  vector<int> productExceptSelf(vector<int> &nums) {
+  vector<int> productExceptSelf(vector<int>& nums) {
     // initialise prefix and suffix array
     // compute their own products
     // product of prefix,suffix

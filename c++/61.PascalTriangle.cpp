@@ -119,7 +119,7 @@ int main() {
   int numRows = 1;
   vector<vector<int>> result1 = solution.pascalTriangle(numRows);
   cout << "Pascal's Triangle for numRows = " << numRows << ":\n";
-  for (const auto &row : result1) {
+  for (const auto& row : result1) {
     for (int num : row) {
       cout << num << " ";
     }
@@ -130,7 +130,7 @@ int main() {
   numRows = 5;
   vector<vector<int>> result2 = solution.pascalTriangle(numRows);
   cout << "\nPascal's Triangle for numRows = " << numRows << ":\n";
-  for (const auto &row : result2) {
+  for (const auto& row : result2) {
     for (int num : row) {
       cout << num << " ";
     }

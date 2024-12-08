@@ -28,7 +28,7 @@ using namespace std;
 // check each element with each other, if it is double return true else false
 class Solution {
 public:
-  bool checkIfExist(vector<int> &arr) {
+  bool checkIfExist(vector<int>& arr) {
     for (int i = 0; i < arr.size(); i++) {
       for (int j = i + 1; j < arr.size(); j++) {
         if (arr[i] == 2 * arr[j] && i != j) {
@@ -41,7 +41,7 @@ public:
 };
 
 // Overloading << operator to print vector
-ostream &operator<<(ostream &os, const vector<int> &vec) {
+ostream& operator<<(ostream& os, const vector<int>& vec) {
   for (int num : vec) {
     os << num << " ";
   }

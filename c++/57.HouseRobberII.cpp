@@ -92,7 +92,7 @@ using namespace std;
 
 class Solution {
 public:
-  int robRange(vector<int> &nums, int start, int end) {
+  int robRange(vector<int>& nums, int start, int end) {
     int prev2 = 0, prev1 = 0;
 
     for (int i = start; i <= end; i++) {
@@ -104,7 +104,7 @@ public:
     return prev1;
   }
 
-  int rob(vector<int> &nums) {
+  int rob(vector<int>& nums) {
     int n = nums.size();
 
     // Handle base cases

@@ -26,10 +26,10 @@ using namespace std;
 
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 class Solution {
@@ -38,12 +38,12 @@ public:
   // phele aane chahoye, baaki se farak nhi padta
   // after node x sort the ll such that, the sorted is for whole ll
   // preserve original relative order of ll
-  ListNode *partition(ListNode *head, int x) {
+  ListNode* partition(ListNode* head, int x) {
     // Dummy nodes for the two lists
-    ListNode *lessHead = new ListNode(0);    // For values < x
-    ListNode *greaterHead = new ListNode(0); // For values >= x
-    ListNode *less = lessHead;
-    ListNode *greater = greaterHead;
+    ListNode* lessHead = new ListNode(0);    // For values < x
+    ListNode* greaterHead = new ListNode(0); // For values >= x
+    ListNode* less = lessHead;
+    ListNode* greater = greaterHead;
 
     while (head != nullptr) {
       if (head->val < x) {
@@ -63,7 +63,7 @@ public:
     less->next = greaterHead->next;
 
     // Save the head of the new list
-    ListNode *newHead = lessHead->next;
+    ListNode* newHead = lessHead->next;
 
     // Clean up dummy nodes
     delete lessHead;
@@ -91,7 +91,7 @@ Time Complexity:
 Space Complexity: O(1) additional space (aside from dummy nodes).*/
 
 int main() {
-  ListNode *head = new ListNode(1);
+  ListNode* head = new ListNode(1);
   head->next = new ListNode(4);
   head->next->next = new ListNode(3);
   head->next->next->next = new ListNode(2);
@@ -100,7 +100,7 @@ int main() {
   cout << head->next->next->next->next->next->val << endl;
 
   Solution obj;
-  ListNode *head1 = obj.partition(head, 3);
+  ListNode* head1 = obj.partition(head, 3);
   cout << head1->next->next->next->next->next->val << endl;
   return 0;
 }

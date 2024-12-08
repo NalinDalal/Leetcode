@@ -87,7 +87,7 @@ using namespace std;
 
 class Solution {
 public:
-  bool wordBreak(std::string s, std::vector<std::string> &wordDict) {
+  bool wordBreak(std::string s, std::vector<std::string>& wordDict) {
     std::unordered_set<std::string> wordSet(
         wordDict.begin(),
         wordDict.end()); // unordered_set is used to store wordDict for O(1)
@@ -99,7 +99,7 @@ public:
 
     // Iterate from the end of the string to the start
     for (int i = s.size() - 1; i >= 0; --i) {
-      for (const std::string &word : wordSet) {
+      for (const std::string& word : wordSet) {
         if (i + word.size() <= s.size() && s.substr(i, word.size()) == word) {
           dp[i] = dp[i + word.size()];
           if (dp[i]) {

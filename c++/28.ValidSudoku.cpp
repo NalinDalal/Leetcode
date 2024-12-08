@@ -75,7 +75,7 @@ without repetition.
 
 class Solution {
 public:
-  bool isValidSudoku(vector<vector<char>> &board) {
+  bool isValidSudoku(vector<vector<char>>& board) {
     //         Three Cases so 3 condtions.
     int rowcase[9][9] = {0};
     int colcase[9][9] = {0};

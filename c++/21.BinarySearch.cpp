@@ -22,7 +22,7 @@ Explanation: 2 does not exist in nums so return -1
 
 class Solution {
 public:
-  int search(vector<int> &nums, int target) {
+  int search(vector<int>& nums, int target) {
     int s = 0;          // start point defined
     int e = size(nums); // end point defined
     if (e == 1) {

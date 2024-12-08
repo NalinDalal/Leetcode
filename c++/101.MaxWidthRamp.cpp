@@ -33,7 +33,7 @@ using namespace std;
 
 class Solution {
 public:
-  int maxWidthRamp(vector<int> &nums) {
+  int maxWidthRamp(vector<int>& nums) {
     int maxWidth = 0;
     for (int i = 0; i < nums.size(); i++) {
       for (int j = 1; j < nums.size() + 1; j++) {
@@ -63,7 +63,7 @@ public:
 
 class Solution2 {
 public:
-  int maxWidthRamp2(vector<int> &nums) {
+  int maxWidthRamp2(vector<int>& nums) {
     stack<int> decreasingIndices;
     int n = nums.size();
 
@@ -94,7 +94,7 @@ public:
 // space complexity: O(n)
 
 // Utility function to print a vector
-void printVector(const vector<int> &nums) {
+void printVector(const vector<int>& nums) {
   cout << "[";
   for (size_t i = 0; i < nums.size(); i++) {
     cout << nums[i];

@@ -30,7 +30,7 @@ return [1, 2].
 // Solution 1 on the first intituion
 class Solution {
 public:
-  vector<int> twoSum(vector<int> &numbers, int target) {
+  vector<int> twoSum(vector<int>& numbers, int target) {
     for (int i = 0; i < numbers.size() - 1; i++) {
       for (int j = i + 1; j < numbers.size(); j++) {
         if (numbers[i] + numbers[j] == target) {
@@ -50,7 +50,7 @@ public:
 // If our current sum is too large, move closer to the left.
 class Solution {
 public:
-  vector<int> twoSum(vector<int> &nums, int target) {
+  vector<int> twoSum(vector<int>& nums, int target) {
     int L = 0, R = nums.size() - 1;
     while (L < R) {
       if (nums[L] + nums[R] > target) {

@@ -40,15 +40,15 @@ if (values[left] != values[right]) {
 // Code:
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 class Solution {
 public:
-  bool isPalindrome(ListNode *head) {
+  bool isPalindrome(ListNode* head) {
     // check if list is empty ot single element only
     if (!head || head->next) {
       return true;
@@ -56,7 +56,7 @@ public:
 
     // initialise a vector
     std::vector<int> values;
-    ListNode *current = head;
+    ListNode* current = head;
 
     // Traverse the linked list and store node values in a vector
     while (current) {

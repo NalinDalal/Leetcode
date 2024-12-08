@@ -50,7 +50,7 @@ return vector
 // Space complexity:O(n)
 class Solution {
 public:
-  vector<int> dailyTemperatures(vector<int> &temperatures) {
+  vector<int> dailyTemperatures(vector<int>& temperatures) {
     int n = temperatures.size();
     stack<pair<int, int>> st;
 

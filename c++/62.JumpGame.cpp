@@ -49,7 +49,7 @@ using namespace std;
 
 class Solution {
 public:
-  bool canJump(vector<int> &nums) {
+  bool canJump(vector<int>& nums) {
     int maxReach = 0;
     int n = nums.size();
 

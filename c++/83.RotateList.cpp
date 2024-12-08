@@ -23,10 +23,10 @@ The number of nodes in the list is in the range [0, 500].
 // Definition for singly-linked list.
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 // length of ll-> divide the k by it
@@ -41,12 +41,12 @@ struct ListNode {
 
 class Solution {
 public:
-  ListNode *rotateRight(ListNode *head, int k) {
+  ListNode* rotateRight(ListNode* head, int k) {
     if (!head || !head->next || k == 0)
       return head;
 
     // Step 1: Compute the length of the list
-    ListNode *current = head;
+    ListNode* current = head;
     int n = 1; // At least 1 node exists
     while (current->next) {
       current = current->next;
@@ -61,11 +61,11 @@ public:
     int stepsToNewHead = n - k;
 
     // Step 4: Break the circle at the new head
-    ListNode *newTail = head;
+    ListNode* newTail = head;
     for (int i = 1; i < stepsToNewHead; i++) {
       newTail = newTail->next;
     }
-    ListNode *newHead = newTail->next;
+    ListNode* newHead = newTail->next;
     newTail->next = nullptr;
 
     return newHead;
@@ -73,7 +73,7 @@ public:
 };
 
 // Helper function to print the list
-void printList(ListNode *head) {
+void printList(ListNode* head) {
   while (head) {
     std::cout << head->val << " ";
     head = head->next;
@@ -84,7 +84,7 @@ void printList(ListNode *head) {
 // Main function for testing
 int main() {
   // Create a sample list: [1, 2, 3, 4, 5]
-  ListNode *head = new ListNode(1);
+  ListNode* head = new ListNode(1);
   head->next = new ListNode(2);
   head->next->next = new ListNode(3);
   head->next->next->next = new ListNode(4);
@@ -92,7 +92,7 @@ int main() {
 
   Solution solution;
   int k = 2;
-  ListNode *rotatedHead = solution.rotateRight(head, k);
+  ListNode* rotatedHead = solution.rotateRight(head, k);
 
   printList(rotatedHead); // Output: 4 5 1 2 3
 

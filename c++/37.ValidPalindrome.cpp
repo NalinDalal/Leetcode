@@ -1,7 +1,9 @@
 /*
 125. Valid Palindrome
 
-A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+A phrase is a palindrome if, after converting all uppercase letters into
+lowercase letters and removing all non-alphanumeric characters, it reads the
+same forward and backward. Alphanumeric characters include letters and numbers.
 
 Given a string s, return true if it is a palindrome, or false otherwise.
 
@@ -20,17 +22,18 @@ Input: s = " "
 Output: true
 Explanation: s is an empty string "" after removing non-alphanumeric characters.
 Since an empty string reads the same forward and backward, it is a palindrome.
- 
+
 
 Constraints:
 1 <= s.length <= 2 * 10^5
 s consists only of printable ASCII characters.
 */
 
-//Approach
+// Approach
 /*
  first remove all non-alphanumeric characters.
- what i can deduce is that we need to traverse the string from both side, 2 pointer, if any place no match return false, else return false
+ what i can deduce is that we need to traverse the string from both side, 2
+ pointer, if any place no match return false, else return false
 
 */
 
@@ -49,7 +52,7 @@ public:
 };
 
 
-Problem with it-> 
+Problem with it->
 s = "race a car"
 Output=true
 Expected=false
@@ -66,34 +69,34 @@ Output=false
 Expected=true
 */
 
-
 class Solution {
 public:
-    bool isPalindrome(string s) {
-        //std::regex_replace(s, std::regex("\\s+"), "");
-        //filter all non-alphanumeric symbols
-        std::string filtered;
-        for (char c : s) {
-            if (std::isalnum(c)) { // Check if the character is alphanumeric
-                filtered += std::tolower(c); // Convert to lowercase and add to filtered string
-            }
-        }
-
-        //s = std::regex_replace(s, std::regex("\\s+"), "");
-
-int n=filtered.length();
-
-        // empty string
-        if(n==0){
-            return true;
-        }
-
-        //non empty string
-        for(int i=0;i<n/2;i++){
-            if(filtered[i]!=filtered[n-1-i]){
-                return false;   // Found a mismatch, not a palindrome
-            }
-        }
-        return true;    // If no mismatches found, it's a palindrome
+  bool isPalindrome(string s) {
+    // std::regex_replace(s, std::regex("\\s+"), "");
+    // filter all non-alphanumeric symbols
+    std::string filtered;
+    for (char c : s) {
+      if (std::isalnum(c)) { // Check if the character is alphanumeric
+        filtered +=
+            std::tolower(c); // Convert to lowercase and add to filtered string
+      }
     }
+
+    // s = std::regex_replace(s, std::regex("\\s+"), "");
+
+    int n = filtered.length();
+
+    // empty string
+    if (n == 0) {
+      return true;
+    }
+
+    // non empty string
+    for (int i = 0; i < n / 2; i++) {
+      if (filtered[i] != filtered[n - 1 - i]) {
+        return false; // Found a mismatch, not a palindrome
+      }
+    }
+    return true; // If no mismatches found, it's a palindrome
+  }
 };

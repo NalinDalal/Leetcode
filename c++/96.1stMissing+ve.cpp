@@ -54,7 +54,7 @@ using namespace std;
 
 class Solution {
 public:
-  int firstMissingPositive(vector<int> &nums) {
+  int firstMissingPositive(vector<int>& nums) {
     int n = nums.size();
 
     // Step 1: Place each number in its correct position

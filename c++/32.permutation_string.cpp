@@ -54,8 +54,8 @@ permutations.
 
 class Solution {
 private:
-  void recurPermute(vector<int> &ds, vector<int> &nums,
-                    vector<vector<int>> &ans, int freq[]) {
+  void recurPermute(vector<int>& ds, vector<int>& nums,
+                    vector<vector<int>>& ans, int freq[]) {
     if (ds.size() == nums.size()) {
       ans.push_back(ds);
       return;
@@ -72,7 +72,7 @@ private:
   }
 
 public:
-  vector<vector<int>> permute(vector<int> &nums) {
+  vector<vector<int>> permute(vector<int>& nums) {
     vector<vector<int>> ans;
     vector<int> ds;
     int freq[nums.size()];

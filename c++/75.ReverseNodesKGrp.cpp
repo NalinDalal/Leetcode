@@ -59,17 +59,17 @@ using namespace std;
 
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 // Helper function to reverse a section of the linked list
-ListNode *reverse(ListNode *start, ListNode *end) {
-  ListNode *prev = nullptr;
-  ListNode *curr = start;
-  ListNode *next = nullptr;
+ListNode* reverse(ListNode* start, ListNode* end) {
+  ListNode* prev = nullptr;
+  ListNode* curr = start;
+  ListNode* next = nullptr;
 
   while (curr != end) {
     next = curr->next;
@@ -82,17 +82,17 @@ ListNode *reverse(ListNode *start, ListNode *end) {
 
 class Solution {
 public:
-  ListNode *reverseKGroup(ListNode *head, int k) {
+  ListNode* reverseKGroup(ListNode* head, int k) {
     if (!head || k == 1)
       return head;
 
-    ListNode *dummy = new ListNode(0);
+    ListNode* dummy = new ListNode(0);
     dummy->next = head;
-    ListNode *prevGroupEnd = dummy;
+    ListNode* prevGroupEnd = dummy;
 
     while (true) {
-      ListNode *groupStart = prevGroupEnd->next;
-      ListNode *groupEnd = prevGroupEnd;
+      ListNode* groupStart = prevGroupEnd->next;
+      ListNode* groupEnd = prevGroupEnd;
 
       // Check if there are at least k nodes left
       for (int i = 0; i < k && groupEnd; ++i) {
@@ -102,8 +102,8 @@ public:
         break; // Less than k nodes remaining
 
       // Reverse the k nodes
-      ListNode *nextGroupStart = groupEnd->next;
-      ListNode *newGroupHead = reverse(groupStart, groupEnd->next);
+      ListNode* nextGroupStart = groupEnd->next;
+      ListNode* newGroupHead = reverse(groupStart, groupEnd->next);
 
       // Connect the previous group with the reversed group
       prevGroupEnd->next = newGroupHead;
@@ -121,11 +121,11 @@ public:
 // Space Complexity: O(1)
 
 // Helper function to create a linked list from an array
-ListNode *createLinkedList(const vector<int> &vals) {
+ListNode* createLinkedList(const vector<int>& vals) {
   if (vals.empty())
     return nullptr;
-  ListNode *head = new ListNode(vals[0]);
-  ListNode *current = head;
+  ListNode* head = new ListNode(vals[0]);
+  ListNode* current = head;
   for (size_t i = 1; i < vals.size(); ++i) {
     current->next = new ListNode(vals[i]);
     current = current->next;
@@ -134,8 +134,8 @@ ListNode *createLinkedList(const vector<int> &vals) {
 }
 
 // Helper function to print a linked list
-void printLinkedList(ListNode *head) {
-  ListNode *current = head;
+void printLinkedList(ListNode* head) {
+  ListNode* current = head;
   while (current) {
     cout << current->val;
     if (current->next)
@@ -151,20 +151,20 @@ int main() {
   // Test Case 1
   vector<int> values1 = {1, 2, 3, 4, 5};
   int k1 = 2;
-  ListNode *head1 = createLinkedList(values1);
+  ListNode* head1 = createLinkedList(values1);
   cout << "Original List 1: ";
   printLinkedList(head1);
-  ListNode *result1 = solution.reverseKGroup(head1, k1);
+  ListNode* result1 = solution.reverseKGroup(head1, k1);
   cout << "Reversed List (k = 2): ";
   printLinkedList(result1);
 
   // Test Case 2
   vector<int> values2 = {1, 2, 3, 4, 5};
   int k2 = 3;
-  ListNode *head2 = createLinkedList(values2);
+  ListNode* head2 = createLinkedList(values2);
   cout << "Original List 2: ";
   printLinkedList(head2);
-  ListNode *result2 = solution.reverseKGroup(head2, k2);
+  ListNode* result2 = solution.reverseKGroup(head2, k2);
   cout << "Reversed List (k = 3): ";
   printLinkedList(result2);
 

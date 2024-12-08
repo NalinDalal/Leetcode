@@ -69,7 +69,7 @@ using namespace std;
 
 class Solution {
 public:
-  int largestRectangleArea(std::vector<int> &heights) {
+  int largestRectangleArea(std::vector<int>& heights) {
     std::stack<int> stack; // To store indices of heights
     int max_area = 0;
     int n = heights.size();

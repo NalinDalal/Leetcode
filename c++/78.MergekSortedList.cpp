@@ -48,26 +48,26 @@ is empty, building the sorted merged list along the way.*/
 
 // Comparator for the min-heap
 struct compare {
-  bool operator()(ListNode *a, ListNode *b) {
+  bool operator()(ListNode* a, ListNode* b) {
     return a->val > b->val; // min-heap based on node values
   }
 };
 
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 class Solution {
 public:
-  ListNode *mergeKLists(vector<ListNode *> &lists) {
+  ListNode* mergeKLists(vector<ListNode*>& lists) {
     vector<int> values;
 
     // Step 1: Convert all linked lists to an array
-    for (ListNode *list : lists) {
+    for (ListNode* list : lists) {
       while (list != nullptr) {
         values.push_back(list->val);
         list = list->next;
@@ -78,8 +78,8 @@ public:
     sort(values.begin(), values.end());
 
     // Step 3: Convert sorted array back to linked list
-    ListNode *dummy = new ListNode(); // dummy node to simplify construction
-    ListNode *current = dummy;
+    ListNode* dummy = new ListNode(); // dummy node to simplify construction
+    ListNode* current = dummy;
     for (int val : values) {
       current->next = new ListNode(val);
       current = current->next;
@@ -104,38 +104,38 @@ using namespace std;
 // Definition for singly-linked list.
 struct ListNode {
   int val;
-  ListNode *next;
+  ListNode* next;
   ListNode(int x) : val(x), next(nullptr) {}
 };
 
 // Comparator for the min-heap
 struct compare {
-  bool operator()(ListNode *a, ListNode *b) {
+  bool operator()(ListNode* a, ListNode* b) {
     return a->val > b->val; // min-heap based on node values
   }
 };
 
 class Solution {
 public:
-  ListNode *mergeKLists(vector<ListNode *> &lists) {
+  ListNode* mergeKLists(vector<ListNode*>& lists) {
     // Min-heap to store the nodes
-    priority_queue<ListNode *, vector<ListNode *>, compare> minHeap;
+    priority_queue<ListNode*, vector<ListNode*>, compare> minHeap;
 
     // Step 1: Push the first node of each linked list into the heap
-    for (ListNode *list : lists) {
+    for (ListNode* list : lists) {
       if (list) {
         minHeap.push(list);
       }
     }
 
     // Dummy node to act as the head of the merged list
-    ListNode *dummy = new ListNode(0);
-    ListNode *current = dummy;
+    ListNode* dummy = new ListNode(0);
+    ListNode* current = dummy;
 
     // Step 2: Process the heap
     while (!minHeap.empty()) {
       // Get the smallest element (from the top of the heap)
-      ListNode *smallest = minHeap.top();
+      ListNode* smallest = minHeap.top();
       minHeap.pop();
 
       // Add the smallest element to the merged list
