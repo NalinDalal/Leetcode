@@ -67,6 +67,9 @@ substring.
 // Time Complexity: O(n)
 // Space Complexity: O(256)
 
+#include <iostream>
+#include <string>
+#include <unordered_map>
 class Solution {
 public:
   int lengthOfLongestSubstring(string s) {
