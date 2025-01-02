@@ -25,25 +25,25 @@ class TreeNode {
 let count: number = 0; // Keeps track of the number of nodes visited
 let result: number = -1; // Stores the k-th smallest value
 
-function inorder(root:TreeNode|null,k:number):number{
-    if(root==null)  return;
-//traverse left subtree
-    inorder(root:root.left,k:number);
-    count++;    //increase count for each node visited
-    
-    //if count match k, set result
-    if(count==k){
-        result=root.val;return;
-    }
-    inorder(root.right,k);
+function inorder(root: TreeNode | null, k: number): number {
+  if (root == null) return;
+  //traverse left subtree
+  inorder(root.left, k);
+  count++; //increase count for each node visited
+
+  //if count match k, set result
+  if (count == k) {
+    result = root.val;
+    return;
+  }
+  inorder(root.right, k);
 }
 function kthSmallest(root: TreeNode | null, k: number): number {
-    count = 0;  // Reset count before starting the traversal
-    result = -1; // Reset result before starting the traversal
-inorder(root,k);
-    return result;
+  count = 0; // Reset count before starting the traversal
+  result = -1; // Reset result before starting the traversal
+  inorder(root, k);
+  return result;
 }
-
 
 /* https://leetcode.com/problems/kth-smallest-element-in-a-bst/submissions/1491337793/
  * */
