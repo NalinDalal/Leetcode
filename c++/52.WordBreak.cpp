@@ -80,9 +80,10 @@ class Solution:
 
         return dp[0]
     */
+#include <iostream>
 #include <string>
+#include <unordered_set>
 #include <vector>
-
 using namespace std;
 
 class Solution {
@@ -139,3 +140,8 @@ int main() {
 
   return 0;
 }
+
+// 75%
+// sub: https://leetcode.com/problems/word-break/submissions/1428257524/
+// sol:
+// https://leetcode.com/problems/word-break/solutions/6343401/139-word-break75-by-nalindalal2004-pqtf/
