@@ -30,6 +30,8 @@ Constraints:
 All the numbers of nums are unique.
 */
 #include <vector>
+using std::vector;
+
 class Solution {
 public:
   vector<vector<int>> subsets(vector<int>& nums) {
