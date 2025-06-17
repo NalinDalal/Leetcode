@@ -262,4 +262,5 @@ public:
 };
 
 // sub(100%):https://leetcode.com/problems/count-the-number-of-arrays-with-k-matching-adjacent-elements/submissions/1510138923/
-// sol: t.ly/WoGAf
+// sol:
+// https://leetcode.com/problems/count-the-number-of-arrays-with-k-matching-adjacent-elements/solutions/6852435/3405-count-the-number-of-arrays-with-k-m-3sli/
