@@ -139,3 +139,8 @@ int main() {
 
   return 0;
 }
+
+// sub:
+// https://leetcode.com/problems/pascals-triangle/submissions/1436979552/?envType=daily-question&envId=2025-08-01
+// sol:
+// https://leetcode.com/problems/pascals-triangle/solutions/7030943/118-pascals-triangle-by-nalindalal2004-2n8b/
