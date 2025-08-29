@@ -1,0 +1,83 @@
+/*3021. Alice and Bob Playing Flower Game
+Alice and Bob are playing a turn-based game on a field, with two lanes of
+flowers between them. There are x flowers in the first lane between Alice and
+Bob, and y flowers in the second lane between them.
+
+
+
+The game proceeds as follows:
+
+Alice takes the first turn.
+In each turn, a player must choose either one of the lane and pick one flower
+from that side. At the end of the turn, if there are no flowers left at all, the
+current player captures their opponent and wins the game. Given two integers, n
+and m, the task is to compute the number of possible pairs (x, y) that satisfy
+the conditions:
+
+Alice must win the game according to the described rules.
+The number of flowers x in the first lane must be in the range [1,n].
+The number of flowers y in the second lane must be in the range [1,m].
+Return the number of possible pairs (x, y) that satisfy the conditions mentioned
+in the statement.
+
+
+
+Example 1:
+
+Input: n = 3, m = 2
+Output: 3
+Explanation: The following pairs satisfy conditions described in the statement:
+(1,2), (3,2), (2,1). Example 2:
+
+Input: n = 1, m = 1
+Output: 0
+Explanation: No pairs satisfy the conditions described in the statement.
+
+
+Constraints:
+
+1 <= n, m <= 105
+
+Hint 1
+(x, y) is valid if and only if they have different parities.
+*/
+
+/*(x,y) are required to have diff parities
+ total moves=(x+y)
+ (x+y) is odd->alice wins
+ (x+y) is even->bob wins
+
+ odd total <=> x and y have diff parities
+    */
+
+/*Step 1: Count Odds and Evens
+ - In range [1,n]:
+    - Odd Count=(n+1)/2
+    - Even Count=n/2
+ - In range [1,m]:
+    - Odd Count=(m+1)/2
+    - Even Count=m/2
+
+Step 2: Valid Pairs
+    - `x` odd, `y` even
+    - `x` even, `y` odd
+
+result = Odd\sub{n} * Even\sub{m} + Odd\sub{m} * Even\sub{n}
+    */
+
+class Solution {
+public:
+  long long flowerGame(int n, int m) {
+    long long oddN = (n + 1) / 2;
+    long long evenN = n / 2;
+    long long oddM = (m + 1) / 2;
+    long long evenM = m / 2;
+
+    return oddN * evenM + evenN * oddM;
+  }
+};
+
+// sub:
+// https://leetcode.com/problems/alice-and-bob-playing-flower-game/submissions/1751931350/?envType=daily-question&envId=2025-08-29
+// sol:
+// https://leetcode.com/problems/alice-and-bob-playing-flower-game/solutions/7133219/3021-alice-and-bob-playing-flower-game-b-na3r/
