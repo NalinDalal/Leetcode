@@ -98,3 +98,7 @@ public:
     return true;
   }
 };
+// sub:
+// https://leetcode.com/problems/valid-sudoku/submissions/1341062403/?envType=daily-question&envId=2025-08-30
+// sol:
+// https://leetcode.com/problems/valid-sudoku/solutions/5570731/36-valid-sudoku/?envType=daily-question&envId=2025-08-30
