@@ -1,9 +1,4 @@
-/*
-*11. Container With Most Water
-Medium
-Topics
-Companies
-Hint
+/*11. Container With Most Water
 You are given an integer array height of length n. There are n vertical lines
 drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
 
@@ -46,3 +41,7 @@ public:
     return res;
   }
 };
+// sub:
+// https://leetcode.com/problems/container-with-most-water/submissions/1790920937/?envType=daily-question&envId=2025-10-04
+// sol:
+// https://leetcode.com/problems/container-with-most-water/solutions/7247604/11-container-with-most-water-by-nalindal-s9o2/
