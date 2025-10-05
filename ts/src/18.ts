@@ -74,3 +74,5 @@ function pacificAtlantic(heights: number[][]): number[][] {
 
   return ans;
 }
+//sub: https://leetcode.com/problems/pacific-atlantic-water-flow/submissions/1495834670/?envType=daily-question&envId=2025-10-05
+//sol: https://leetcode.com/problems/pacific-atlantic-water-flow/solutions/7250636/417-pacific-atlantic-water-flow-by-nalin-rn3z/
