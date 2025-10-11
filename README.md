@@ -1,11 +1,12 @@
-To get started:
-first fork the repository
+Welcome
+You can contribute to this project either by adding new codes or solving similar problems in different languages.
+How to contribute?
+    1.Fork  this repository.
+    2.Clone your forked repo locally.
+    3.Add a folder by your name and add the solutions there.Stage and Commit them locally first.
+    4.Push it to your remote forked repo.
+    5.Create a pull request to the main repo.
 
-now locally clone the forked repo
+Your work will be acknowledged as soon as possible.
 
-add a folder by your name and add the questions and codes there, once it is done
-push to the remote fork you created
 
-now go to main reposity and make a pull request accordingly.
-
-I promise to get it sorted by day's end
